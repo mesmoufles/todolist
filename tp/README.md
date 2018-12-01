@@ -1,4 +1,6 @@
-tp
+TODO List
 ==
 
-A Symfony project created on September 20, 2018, 2:23 pm.
+You will need to import the bdd/ecv.sql file in order for it to function properly. 
+
+Database name must remain the same. 
