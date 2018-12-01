@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <header>
+        <h1>New task</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="{{ path('todo_index') }}">Back to list</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="general-wrapper">
+        <div class="form-container">
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            <div class="submit-container">
+                <input type="submit" value="Create" id="new-task-submit"/>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

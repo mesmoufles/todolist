@@ -1,0 +1,240 @@
+a, a:active, a:focus, a:visited {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+/* *************************** HEADER *************************** */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e6f2ff;
+    padding-left: 50px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    padding-right: 50px;
+    font-size: 1.2rem;
+}
+
+/* *************************** END HEADER *************************** */
+
+.general-wrapper {
+    display: flex;
+    padding: 0 30px 0 30px;
+}
+
+/* *************************** FILTER *************************** */
+
+.filter-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+
+}
+
+.filter-container input {
+    margin-right: 15px;
+    width: 30%;
+}
+
+.filter-container button:not(:last-child) {
+    margin-right: 15px;
+}
+
+/* *************************** END FILTER *************************** */
+
+/* *************************** TASKS *************************** */
+
+#todos {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.tasks-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.tasks-container thead tr th {
+    padding: 0 80px 0 80px;
+    font-size: 1.2rem;
+
+}
+
+.tasks-container tbody tr td {
+    padding: 0 80px 0 80px;
+    font-size: 1.1rem;
+
+}
+
+/* *************************** END TASKS *************************** */
+
+/* *************************** USERS *************************** */
+
+#users {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.users-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.users-container thead tr th {
+    padding: 0 100px 0 100px;
+    font-size: 1.2rem;
+
+}
+
+.users-container tbody tr td {
+    padding: 0 100px 0 100px;
+    font-size: 1.1rem;
+
+}
+
+/* *************************** END USERS *************************** */
+
+/* *************************** NEW TASK FORM *************************** */
+
+.form-container {
+    width: 100%;
+}
+
+form[name="appbundle_todo"] {
+    margin-top: 20px;
+
+}
+
+#appbundle_todo {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#appbundle_todo label {
+    margin-right: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#appbundle_todo select {
+    font-size: .9rem
+}
+
+#appbundle_todo input {
+    font-size: .9rem
+}
+
+#appbundle_todo input {
+    justify-self: flex-end;
+}
+
+.submit-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#new-task-submit {
+    font-size: 2rem;
+}
+
+/* *************************** END NEW TASK FORM *************************** */
+
+/* *************************** TASK DETAILS *************************** */
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 30px 0 30px;
+}
+
+.details-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    font-size: 1.2rem;
+}
+
+.details-container thead tr th {
+    padding: 0 100px 0 100px;
+    font-size: 1.2rem;
+
+}
+
+.details-container tbody tr td {
+    padding: 0 100px 0 100px;
+    font-size: 1.1rem;
+
+}
+
+.delete-container {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* *************************** END TASK DETAILS *************************** */
+
+/* *************************** TASK EDIT *************************** */
+.buttons-container ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 30px;
+
+}
+
+.buttons-container ul li:not(:last-child) {
+    margin-right: 15px;
+}
+
+#task-edit-submit, #task-delete-submit {
+    font-size: 2rem;
+}
+
+/* *************************** END TASK EDIT *************************** */
+
+/* *************************** NEW USER FORM *************************** */
+
+form[name="appbundle_user"] {
+    margin-top: 20px;
+
+}
+
+#appbundle_user {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#appbundle_user label {
+    margin-right: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#appbundle_user input {
+    font-size: .9rem
+}
+
+#appbundle_user input {
+    justify-self: flex-end;
+}
+
+#new-user-submit {
+    font-size: 2rem;
+}
+
+/* *************************** NEW USER FORM *************************** */
+

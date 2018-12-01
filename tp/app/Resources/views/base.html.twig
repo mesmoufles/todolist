@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% block javascripts %}
+
+            <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+
+            <script type="text/javascript" src="{{ asset('assets/js/ddtf.js') }}"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+
+            <script type="text/javascript">
+                /*$(document).ready(function () {
+                    $("#table_format").ddTableFilter();
+                });*/
+
+                var optionsUsers = {
+                    valueNames: [ 'lastname', 'firstname' ]
+                };
+
+                var userList = new List('users', optionsUsers);
+
+
+                var optionsTodo = {
+                    valueNames: [ 'description', 'criticity', 'users' ]
+                };
+
+                var userTodo = new List('todos', optionsTodo);
+
+
+
+            </script>
+
+
+        {% endblock %}
+    </body>
+</html>

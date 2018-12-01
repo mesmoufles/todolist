@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <header>
+        <h1>Task details</h1>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="{{ path('todo_index') }}">Back to list</a>
+                </li>
+                <li>
+                    <a href="{{ path('todo_edit', { 'id': toDo.id }) }}">Edit</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main">
+        <div class="details-container">
+            <table>
+                <tbody>
+                <tr>
+                    <th>Id</th>
+                    <td>{{ toDo.id }}</td>
+                </tr>
+                <tr>
+                    <th>Task</th>
+                    <td>{{ toDo.description }}</td>
+                </tr>
+                <tr>
+                    <th>Task criticity</th>
+                    <td>{{ toDo.criticity.id }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="delete-container">
+            {{ form_start(delete_form) }}
+            <input type="submit" value="Delete" id="task-delete-submit">
+            {{ form_end(delete_form) }}
+        </div>
+    </div>
+
+{% endblock %}

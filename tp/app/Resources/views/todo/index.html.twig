@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <header>
+        <h1>TODO List</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="{{ path('todo_new') }}">New task</a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+    <div class="general-wrapper">
+        <div id="todos">
+            <div class="filter-container">
+                <input class="search" placeholder="Search"/>
+                <button class="sort" data-sort="description">
+                    Sort by Description
+                </button>
+                <button class="sort" data-sort="criticity">
+                    Sort by Criticity
+                </button>
+                <button class="sort" data-sort="users">
+                    Sort by Users
+                </button>
+            </div>
+
+            <div class="tasks-container">
+                <table id="table_format" class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Description</th>
+                        <th>Criticity</th>
+                        <th>Users</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody class="list">
+                    {% for toDo in toDos %}
+                        <tr>
+                            <td><a href="{{ path('todo_show', { 'id': toDo.id }) }}">{{ toDo.id }}</a></td>
+                            <td class="description">{{ toDo.description }}</td>
+                            <td class="criticity">{{ toDo.level }}</td>
+                            <td class="users">{{ toDo.lastname }}</td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <a href="{{ path('todo_show', { 'id': toDo.id }) }}">Details</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('todo_edit', { 'id': toDo.id }) }}">Edit</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
